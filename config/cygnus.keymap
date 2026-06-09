@@ -322,6 +322,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        sticky_quick: sticky_quick {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_QUICK";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
+            quick-release;
+        };
     };
 
     macros {
@@ -428,11 +437,11 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE                       &less_than         &left_brace       &left_bracket     &left_paranthesis   &equals        &asterisk        &right_paranthesis  &right_bracket     &right_brace       &greater_than                  &kp LG(TAB)
-&kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T          &kp Y            &kp U               &kp I              &kp O              &kp P                          &none
-&ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G          &kp H            &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SINGLE_QUOTE  &kp MINUS
-&to 5                           &kp Z              &kp X             &kp C             &kp V               &kp B          &kp N            &kp M               &kp COMMA          &kp DOT            &kp SLASH                      &kp BACKSLASH
-                                                                     &kp LEFT_SHIFT    &mo 1               &lt 3 SPACE    &lt 4 BACKSPACE  &mo 2               &kp ENTER
+&kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4              &kp N5                      &kp N6           &kp N7              &kp N8             &kp N9             &kp N0                         &kp EQUAL
+&kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T                       &kp Y            &kp U               &kp I              &kp O              &kp P                          &kp MINUS
+&ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G                       &kp H            &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SINGLE_QUOTE  &kp MINUS
+&to 5                           &kp Z              &kp X             &kp C             &kp V               &kp B                       &kp N            &kp M               &kp COMMA          &kp DOT            &kp SLASH                      &kp BACKSLASH
+                                                                     &none             &lt 1 SPACE         &sticky_quick LEFT_SHIFT    &lt 4 BACKSPACE  &mo 2               &kp ENTER
             >;
         };
 
