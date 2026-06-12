@@ -268,11 +268,11 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4              &kp N5                 &kp N6  &kp N7              &kp N8             &kp N9             &kp N0                         &kp EQUAL
-&kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T                  &kp Y   &kp U               &kp I              &kp O              &kp P                          &kp ASTERISK
-&ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G                  &kp H   &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SINGLE_QUOTE  &kp MINUS
-&to 1                           &kp Z              &kp X             &kp C             &kp V               &kp B                  &kp N   &kp M               &coma_at           &dot_excl          &kp SLASH                      &to 1
-                                                                     &td_app_switch    &lt 1 SPACE         &sticky_quick LSHFT    &mo 2   &lt 4 BACKSPACE     &kp ENTER
+&kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4               &kp N5         &kp N6           &kp N7              &kp N8             &kp N9             &kp N0                         &kp EQUAL
+&kp TAB                         &kp Q              &kp W             &kp E             &kp R                &kp T          &kp Y            &kp U               &kp I              &kp O              &kp P                          &kp ASTERISK
+&ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F   &kp G          &kp H            &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SINGLE_QUOTE  &kp MINUS
+&to 1                           &kp Z              &kp X             &kp C             &kp V                &kp B          &kp N            &kp M               &coma_at           &dot_excl          &kp SLASH                      &to 1
+                                                                     &td_app_switch    &sticky_quick LSHFT  &lt 3 SPACE    &lt 4 BACKSPACE  &mo 2               &kp ENTER
             >;
         };
 
