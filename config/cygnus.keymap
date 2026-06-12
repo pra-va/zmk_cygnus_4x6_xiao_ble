@@ -138,191 +138,6 @@
             hold-trigger-key-positions = <53 52 51 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50>;
         };
 
-        left_paran_less: left_paran_less {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_PARAN_LESS";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        right_paran_less: right_paran_less {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_PARAN_LESS";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        td_tilde: td_tilde {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TILDE";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp TILDE>;
-        };
-
-        td_less_than: td_less_than {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_LESS_THAN";
-            #binding-cells = <0>;
-            bindings = <&kp LESS_THAN>, <&kp EXCLAMATION>;
-        };
-
-        td_l_brace: td_l_brace {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_L_BRACE";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE>, <&kp AT>;
-        };
-
-        td_l_bracket: td_l_bracket {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_L_BRACKET";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&kp HASH>;
-        };
-
-        td_l_paranthesis: td_l_paranthesis {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_L_PARANTHESIS";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp DOLLAR>;
-        };
-
-        td_equals: td_equals {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_EQUALS";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp PERCENT>;
-        };
-
-        td_asterisk: td_asterisk {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_ASTERISK";
-            #binding-cells = <0>;
-            bindings = <&kp ASTERISK>, <&kp CARET>;
-        };
-
-        td_r_paranthesis: td_r_paranthesis {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_R_PARANTHESIS";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp AMPERSAND>;
-        };
-
-        td_r_bracket: td_r_bracket {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_R_BRACKET";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACKET>, <&kp ASTERISK>;
-        };
-
-        td_r_brace: td_r_brace {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_R_BRACE";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACE>, <&todo_pv>;
-        };
-
-        td_greater_than: td_greater_than {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_GREATER_THAN";
-            #binding-cells = <0>;
-            bindings = <&kp GREATER_THAN>, <&javadoc>;
-        };
-
-        less_than: less_than {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LESS_THAN";
-            bindings = <&kp LESS_THAN>, <&kp EXCLAMATION>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        left_brace: left_brace {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_BRACE";
-            bindings = <&kp LEFT_BRACE>, <&kp AT_SIGN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        left_bracket: left_bracket {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_BRACKET";
-            bindings = <&kp LEFT_BRACKET>, <&kp HASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        left_paranthesis: left_paranthesis {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_PARANTHESIS";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp DOLLAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        equals: equals {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EQUALS";
-            bindings = <&kp EQUAL>, <&kp PERCENT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        asterisk: asterisk {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ASTERISK";
-            bindings = <&kp ASTERISK>, <&kp CARET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        right_paranthesis: right_paranthesis {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_PARANTHESIS";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp AMPERSAND>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        right_bracket: right_bracket {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_BRACKET";
-            bindings = <&kp RIGHT_BRACKET>, <&kp ASTERISK>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        right_brace: right_brace {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_BRACE";
-            bindings = <&kp RIGHT_BRACE>, <&todo_pv>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        greater_than: greater_than {
-            compatible = "zmk,behavior-mod-morph";
-            label = "GREATER_THAN";
-            bindings = <&kp GREATER_THAN>, <&javadoc>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         sticky_quick: sticky_quick {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_QUICK";
@@ -330,6 +145,13 @@
             #binding-cells = <1>;
             release-after-ms = <1000>;
             quick-release;
+        };
+
+        td_app_switch: td_app_switch {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_APP_SWITCH";
+            #binding-cells = <0>;
+            bindings = <&kp LG(TAB)>, <&start_app_switch>;
         };
     };
 
@@ -423,6 +245,20 @@
 
             label = "FULL_LESS_GREATER";
         };
+
+        start_app_switch: start_app_switch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI &kp TAB &to 4>;
+            label = "START_APP_SWITCH";
+        };
+
+        end_app_switch: end_app_switch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI &to 0>;
+            label = "END_APP_SWITCH";
+        };
     };
 
     keymap {
@@ -437,11 +273,11 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4              &kp N5                      &kp N6           &kp N7              &kp N8             &kp N9             &kp N0                         &kp EQUAL
-&kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T                       &kp Y            &kp U               &kp I              &kp O              &kp P                          &kp MINUS
-&ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G                       &kp H            &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SINGLE_QUOTE  &kp MINUS
-&to 5                           &kp Z              &kp X             &kp C             &kp V               &kp B                       &kp N            &kp M               &kp COMMA          &kp DOT            &kp SLASH                      &kp BACKSLASH
-                                                                     &none             &lt 1 SPACE         &sticky_quick LEFT_SHIFT    &lt 4 BACKSPACE  &mo 2               &kp ENTER
+&kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4              &kp N5    &kp N6  &kp N7              &kp N8             &kp N9             &kp N0                         &kp EQUAL
+&kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T     &kp Y   &kp U               &kp I              &kp O              &kp P                          &kp MINUS
+&ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G     &kp H   &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SINGLE_QUOTE  &kp MINUS
+&kp LSHFT                       &kp Z              &kp X             &kp C             &kp V               &kp B     &kp N   &kp M               &kp COMMA          &kp DOT            &kp SLASH                      &kp RSHFT
+                                                                     &td_app_switch    &lt 1 SPACE         &to 2     &mo 2   &lt 4 BACKSPACE     &kp ENTER
             >;
         };
 
@@ -490,11 +326,11 @@
 
         navigation {
             bindings = <
-&trans  &trans     &trans      &trans             &trans           &trans        &trans          &trans          &trans        &trans           &trans     &trans
-&trans  &trans     &trans      &trans             &trans           &trans        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans     &trans
-&trans  &kp LCTRL  &kp LALT    &kp LGUI           &kp LSHFT        &trans        &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp ENTER  &trans
-&trans  &kp C_PP   &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans     &trans
-                               &mkp LCLK          &mkp MCLK        &mkp RCLK     &trans          &trans          &trans
+&trans  &trans     &trans      &trans             &trans           &trans        &trans          &trans          &trans           &trans           &trans     &trans
+&trans  &trans     &trans      &trans             &trans           &trans        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &trans     &trans
+&trans  &kp LCTRL  &kp LALT    &kp LGUI           &kp LSHFT        &trans        &kp LEFT        &kp DOWN        &kp UP           &kp RIGHT        &kp ENTER  &trans
+&trans  &kp C_PP   &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT  &trans     &trans
+                               &mkp LCLK          &mkp MCLK        &mkp RCLK     &trans          &trans          &end_app_switch
             >;
         };
 
