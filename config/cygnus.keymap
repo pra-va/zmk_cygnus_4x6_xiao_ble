@@ -271,7 +271,7 @@
 &kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4              &kp N5                 &kp N6  &kp N7              &kp N8             &kp N9             &kp N0                         &kp EQUAL
 &kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T                  &kp Y   &kp U               &kp I              &kp O              &kp P                          &kp ASTERISK
 &ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G                  &kp H   &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SINGLE_QUOTE  &kp MINUS
-&kp LSHFT                       &kp Z              &kp X             &kp C             &kp V               &kp B                  &kp N   &kp M               &coma_at           &dot_excl          &kp SLASH                      &kp RSHFT
+&to 1                           &kp Z              &kp X             &kp C             &kp V               &kp B                  &kp N   &kp M               &coma_at           &dot_excl          &kp SLASH                      &to 1
                                                                      &td_app_switch    &lt 1 SPACE         &sticky_quick LSHFT    &mo 2   &lt 4 BACKSPACE     &kp ENTER
             >;
         };
@@ -288,7 +288,7 @@
 &trans  &trans                &trans                &trans                &trans                &trans            &trans          &trans          &trans          &trans          &trans             &trans
 &trans  &kp LS(LA(NUMBER_1))  &kp LS(LA(NUMBER_2))  &kp LS(LA(NUMBER_3))  &kp LS(LA(NUMBER_4))  &kp LS(LA(N5))    &kp LS(LA(N6))  &kp LS(LA(N7))  &kp LS(LA(N8))  &kp LS(LA(N9))  &kp LS(LA(EQUAL))  &trans
 &trans  &kp LA(N1)            &kp LA(N2)            &kp LA(N3)            &kp LA(N4)            &kp LA(N5)        &kp LA(N6)      &kp LA(N7)      &kp LA(N8)      &kp LA(N9)      &kp LA(EQUAL)      &trans
-&trans  &trans                &trans                &trans                &trans                &trans            &trans          &trans          &trans          &trans          &trans             &trans
+&trans  &trans                &trans                &javadoc              &todo_pv              &trans            &trans          &lambda         &full_lambda    &trans          &trans             &trans
                                                     &trans                &trans                &trans            &trans          &trans          &trans
             >;
         };
