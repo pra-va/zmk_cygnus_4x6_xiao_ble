@@ -50,6 +50,34 @@
             bindings = <&to 5>;
             key-positions = <14 15 16>;
         };
+
+        vol_up {
+            bindings = <&kp C_VOLUME_UP>;
+            key-positions = <16 17>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4 5>;
+        };
+
+        vol_down {
+            bindings = <&kp C_VOLUME_DOWN>;
+            key-positions = <40 41>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4 5>;
+        };
+
+        zoom_in {
+            bindings = <&kp LG(EQUAL)>;
+            key-positions = <18 19>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4 5>;
+        };
+
+        zoom_out {
+            bindings = <&kp LG(MINUS)>;
+            key-positions = <42 43>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4 5>;
+        };
     };
 
     behaviors {
