@@ -10,50 +10,20 @@
         copy {
             bindings = <&kp LG(C)>;
             key-positions = <38 39>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <0>;
             layers = <0 1 2 3 4 5>;
         };
 
         paste {
             bindings = <&kp LG(V)>;
             key-positions = <38 40>;
-            require-prior-idle-ms = <200>;
             layers = <0 1 2 3 4 5>;
         };
 
         screenshot {
             bindings = <&kp LG(LA(C))>;
             key-positions = <38 39 40>;
-            require-prior-idle-ms = <200>;
             layers = <0 1 2 3 4>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <31 32 33>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4 5>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <28 27 26>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4 5>;
-        };
-
-        lambda {
-            bindings = <&lambda>;
-            key-positions = <3 2>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4 5>;
-        };
-
-        full_lambda {
-            bindings = <&full_lambda>;
-            key-positions = <8 9>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4 5>;
         };
 
         undo {
@@ -70,36 +40,10 @@
             layers = <0 1 2 3 4 5>;
         };
 
-        caret {
-            bindings = <&kp CARET>;
-            key-positions = <1 2>;
-            layers = <0>;
-        };
-
-        full_paranthesis {
-            bindings = <&full_paranthesis>;
-            key-positions = <4 7>;
-            layers = <0>;
-        };
-
-        full_bracket {
-            bindings = <&full_brackets>;
-            key-positions = <8 3>;
-        };
-
-        full_braces {
-            bindings = <&full_braces>;
-            key-positions = <2 9>;
-        };
-
-        full_less_greater {
-            bindings = <&full_less_greater>;
-            key-positions = <1 10>;
-        };
-
         semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <44 45>;
+            layers = <0 5>;
         };
     };
 
@@ -152,6 +96,24 @@
             label = "TD_APP_SWITCH";
             #binding-cells = <0>;
             bindings = <&kp LG(TAB)>, <&start_app_switch>;
+        };
+
+        coma_at: coma_at {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMA_AT";
+            bindings = <&kp COMMA>, <&kp AT_SIGN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot_excl: dot_excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_EXCL";
+            bindings = <&kp PERIOD>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -273,11 +235,11 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4              &kp N5    &kp N6  &kp N7              &kp N8             &kp N9             &kp N0                         &kp EQUAL
-&kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T     &kp Y   &kp U               &kp I              &kp O              &kp P                          &kp MINUS
-&ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G     &kp H   &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SINGLE_QUOTE  &kp MINUS
-&kp LSHFT                       &kp Z              &kp X             &kp C             &kp V               &kp B     &kp N   &kp M               &kp COMMA          &kp DOT            &kp SLASH                      &kp RSHFT
-                                                                     &td_app_switch    &lt 1 SPACE         &to 2     &mo 2   &lt 4 BACKSPACE     &kp ENTER
+&kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4              &kp N5                 &kp N6  &kp N7              &kp N8             &kp N9             &kp N0                         &kp EQUAL
+&kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T                  &kp Y   &kp U               &kp I              &kp O              &kp P                          &kp MINUS
+&ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G                  &kp H   &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SINGLE_QUOTE  &kp MINUS
+&kp LSHFT                       &kp Z              &kp X             &kp C             &kp V               &kp B                  &kp N   &kp M               &coma_at           &dot_excl          &kp SLASH                      &kp RSHFT
+                                                                     &td_app_switch    &lt 1 SPACE         &sticky_quick LSHFT    &mo 2   &lt 4 BACKSPACE     &kp ENTER
             >;
         };
 
