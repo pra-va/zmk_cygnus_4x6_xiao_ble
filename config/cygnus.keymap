@@ -156,6 +156,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mm_backspace_symbols: mm_backspace_symbols {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_BACKSPACE_SYMBOLS";
+            bindings = <&kp BACKSPACE>, <&mo 2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -276,11 +285,11 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4              &kp N5         &kp N6         &kp N7              &kp N8             &kp N9             &kp N0                      &kp EQUAL
-&kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T          &kp Y          &kp U               &kp I              &kp O              &kp P                       &kp MINUS
-&ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G          &kp H          &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
-&sticky_quick LSHFT             &kp Z              &kp X             &kp C             &kp V               &kp B          &kp N          &kp M               &kp COMMA          &dot_asterisk      &kp SLASH                   &sticky_quick RSHFT
-                                                                     &td_app_switch    &mo 2               &lt 3 SPACE    &kp BACKSPACE  &mo 4               &kp ENTER
+&kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4              &kp N5         &kp N6                 &kp N7              &kp N8             &kp N9             &kp N0                      &kp EQUAL
+&kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T          &kp Y                  &kp U               &kp I              &kp O              &kp P                       &kp MINUS
+&ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G          &kp H                  &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
+&sticky_quick LSHFT             &kp Z              &kp X             &kp C             &kp V               &kp B          &kp N                  &kp M               &kp COMMA          &dot_asterisk      &kp SLASH                   &sticky_quick RSHFT
+                                                                     &td_app_switch    &mo 2               &lt 3 SPACE    &mm_backspace_symbols  &mo 4               &kp ENTER
             >;
         };
 
@@ -295,7 +304,7 @@
             bindings = <
 &trans  &trans                &trans                &trans                &trans                &trans            &trans          &trans          &trans          &trans          &trans             &trans
 &trans  &kp LS(LA(NUMBER_1))  &kp LS(LA(NUMBER_2))  &kp LS(LA(NUMBER_3))  &kp LS(LA(NUMBER_4))  &kp LS(LA(N5))    &kp LS(LA(N6))  &kp LS(LA(N7))  &kp LS(LA(N8))  &kp LS(LA(N9))  &kp LS(LA(EQUAL))  &trans
-&trans  &kp LA(N1)            &kp LA(N2)            &kp LA(N3)            &kp LA(N4)            &kp LA(N5)        &kp LA(N6)      &kp LA(N7)      &kp LA(N8)      &kp LA(N9)      &kp LA(EQUAL)      &trans
+&to 0   &kp LA(N1)            &kp LA(N2)            &kp LA(N3)            &kp LA(N4)            &kp LA(N5)        &kp LA(N6)      &kp LA(N7)      &kp LA(N8)      &kp LA(N9)      &kp LA(EQUAL)      &trans
 &trans  &trans                &trans                &javadoc              &todo_pv              &trans            &trans          &lambda         &full_lambda    &trans          &trans             &trans
                                                     &trans                &trans                &trans            &trans          &trans          &trans
             >;
@@ -311,7 +320,7 @@
             bindings = <
 &trans     &trans         &trans         &javadoc       &todo_pv          &trans                  &trans                 &lambda    &full_lambda  &trans     &trans     &trans
 &kp TILDE  &kp GRAVE      &kp PERCENT    &kp HASH       &kp DLLR          &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp KP_N7  &kp KP_N8     &kp KP_N9  &kp SLASH  &kp ASTERISK
-&trans     &kp AMPERSAND  &kp PIPE       &kp EXCL       &kp EQUAL         &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp KP_N4  &kp KP_N5     &kp KP_N6  &kp MINUS  &kp PLUS
+&to 0      &kp AMPERSAND  &kp PIPE       &kp EXCL       &kp EQUAL         &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp KP_N4  &kp KP_N5     &kp KP_N6  &kp MINUS  &kp PLUS
 &trans     &kp SLASH      &kp BACKSLASH  &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp KP_N1  &kp KP_N2     &kp KP_N3  &kp KP_N0  &trans
                                          &trans         &trans            &trans                  &trans                 &trans     &trans
             >;
@@ -321,9 +330,9 @@
             bindings = <
 &trans  &trans     &trans    &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans     &trans    &trans    &trans     &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&to 0   &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
 &trans  &trans     &trans    &trans    &trans     &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                             &trans    &trans     &trans    &trans  &mo 6   &trans
+                             &trans    &trans     &trans    &mo 6   &trans  &trans
             >;
         };
 
@@ -331,7 +340,7 @@
             bindings = <
 &trans  &trans     &trans      &trans             &trans           &trans        &trans          &trans          &trans           &trans           &trans     &trans
 &trans  &trans     &trans      &trans             &trans           &trans        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &trans     &trans
-&trans  &kp LCTRL  &kp LALT    &kp LGUI           &kp LSHFT        &trans        &kp LEFT        &kp DOWN        &kp UP           &kp RIGHT        &kp ENTER  &trans
+&to 0   &kp LCTRL  &kp LALT    &kp LGUI           &kp LSHFT        &trans        &kp LEFT        &kp DOWN        &kp UP           &kp RIGHT        &kp ENTER  &trans
 &trans  &kp C_PP   &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT  &trans     &trans
                                &mkp LCLK          &mkp MCLK        &mkp RCLK     &mo 2           &trans          &end_app_switch
             >;
@@ -351,7 +360,7 @@
             bindings = <
 &bt BT_CLR  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&to 0       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
             >;
