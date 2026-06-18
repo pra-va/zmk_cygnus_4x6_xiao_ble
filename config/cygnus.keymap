@@ -80,11 +80,16 @@
             layers = <0 1 2 3 4 5>;
         };
 
+        to_nav {
+            bindings = <&to 4>;
+            key-positions = <31 32 33>;
+            layers = <0 5>;
+        };
+
         to_symbols {
             bindings = <&to 2>;
             key-positions = <19 20 21>;
             layers = <0 5>;
-            require-prior-idle-ms = <200>;
         };
     };
 
