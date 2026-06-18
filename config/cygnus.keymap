@@ -266,7 +266,7 @@
         start_app_switch: start_app_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LGUI &kp TAB &to 4>;
+            bindings = <&kt LGUI &kp TAB &to 5>;
             label = "START_APP_SWITCH";
         };
 
