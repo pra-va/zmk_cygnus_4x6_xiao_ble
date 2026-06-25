@@ -91,6 +91,11 @@
             key-positions = <19 20 21>;
             layers = <0 6>;
         };
+
+        sticky_shift {
+            bindings = <&sticky_quick LSHIFT>;
+            key-positions = <28 31>;
+        };
     };
 
     behaviors {
