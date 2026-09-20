@@ -40,12 +40,6 @@
             layers = <0 1 2 3 4 6>;
         };
 
-        semicolon {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <44 45>;
-            layers = <0 6>;
-        };
-
         to_caps {
             bindings = <&to 6>;
             key-positions = <14 15 16>;
